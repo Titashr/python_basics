@@ -1,7 +1,7 @@
 print("Ceaser's cipher\n")
 
 inputString = input("Enter the required string : ")
-inShift = int(input("Enter the required string : "))
+inShift = int(input("Enter the required shift : "))
 
 
 def my_cipher(string1, shift1):
@@ -9,9 +9,9 @@ def my_cipher(string1, shift1):
     length = len(stringList)
     result = ""
     for i in range(length):
-        test=stringList[i]
+        test = stringList[i]
         if test.islower():
-            result +=chr((ord(test)+shift1-97) % 26 + 97)
+            result += chr((ord(test) + shift1 - 97) % 26 + 97)
         else:
             result += chr((ord(test) + shift1 - 65) % 26 + 65)
     return result
